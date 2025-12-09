@@ -1,13 +1,16 @@
 ---
 title: "NFL Players & Teams - Stats Dashboard"
 author: "Adam White"
-date: "Updated on: Dec. 5th, 2025"
+date: "Updated: `r format(Sys.Date(), '%m/%d/%Y')`"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) }) 
 ---
 
 ```{r, warning=FALSE, echo = FALSE}
+
+
 library(flexdashboard)
 library(nflreadr)
 library(ggplot2)
